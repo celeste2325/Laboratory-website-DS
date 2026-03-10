@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+header {
+  background-color: rgb(12, 182, 233);
+  padding: 1%;
+}
+header div {
+  display: inline-block;
+  width: 45%;
+}
+nav {
+  display: inline-block;
+  width: 45%;
+  margin-left: 9%;
+  text-align: right;
+}
+.lab-logo {
+  display: inline;
+  width: 15%;
+}
+nav ul {
+  display: inline-block;
+  width: 100%;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  width: 32%;
+}
+nav ul li a {
+  display: inline-block;
+  width: 100%;
+  color: rgb(66, 66, 66);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Main */
+main {
+  background-color: rgb(208, 231, 253);
+  min-height: 75vh;
+}
+main section {
+  width: 100%;
+  text-align: center;
+}
+/* Banner */
+#banner {
+  background-image: url("../images/banner-logo.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 40vh;
+}
+h1,
+#subtitle-banner-home {
+  color: rgb(28, 125, 160);
+  text-shadow: 2px 2px rgb(216, 211, 211);
+  font-size: 2.5em;
+  text-align: center;
+}
+/* padding-top only for the Home banner h1 */
+#banner h1 {
+  padding-top: 6%;
+}
+/* /Banner */
+
+#lab-services-container {
+  height: auto;
+}
+.card {
+  display: inline-block;
+  width: 25%;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  text-align: center;
+  border: 1px solid rgb(139, 138, 138);
+  border-radius: 2%;
+}
+.card h3 {
+  height: 3rem;
+  font-size: 1.2em;
+}
+.card li,
+.card h2 {
+  font-size: 1em;
+  color: rgb(78, 76, 76);
+  font-weight: 600;
+  list-style: none;
+}
+
+section a {
+  text-decoration: none;
+}
+.arrow-icon {
+  height: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+/* about */
+.container-image {
+  display: inline-block;
+  width: 40%;
+}
+.container-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+.container-description {
+  display: inline-block;
+  width: 50%;
+}
+.container-description p {
+  text-align: justify;
+  font-weight: 400;
+}
+/* Contact */
+.contact-icon {
+  width: 5%;
+  margin-right: 4%;
+}
+#contact-form-container {
+  background-color: rgb(237, 241, 241);
+  height: auto;
+}
+/* /Contact */
+
+/* footer */
+footer {
+  padding: 1rem;
+  background-color: rgb(99, 99, 102);
+  text-align: right;
+}
+footer div a img {
+  height: 20px;
+}
+
+/* This class hides the text visually but keeps it available for screen readers. */
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}
