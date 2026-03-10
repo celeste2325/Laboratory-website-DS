@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,95 +17,161 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
-      <div>
-        <a href="../index.html"
-          ><img
-            class="lab-logo"
-            src="../images/lab-icon.png"
-            alt="laboratory logo"
-        /></a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <!--According to chatGpt href="#", it affects navigability and SEO, and
-          aria-current="page" indicates the current page for screen readers-->
-          <li><a href="contact.html" aria-current="page">Contact</a></li>
-        </ul>
+      <!-- nav with bootstrap burger menu -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"
+            ><img
+              class="img-fluid lab-logo"
+              src="../images/lab-icon.png"
+              alt="laboratory logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="justify-content-lg-end collapse navbar-collapse"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active fw-bold"
+                  href="contact.html"
+                  aria-current="page"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
+      <!-- /nav with bootstrap burger menu -->
     </header>
     <main>
-      <section id="banner">
-        <h1>Contact</h1>
+      <!-- Banner -->
+      <section class="banner position-relative">
+        <h1
+          class="banner__title text-center position-absolute top-50 start-50 translate-middle z-3 shadow-lg p-3 mb-5 rounded"
+        >
+          Contact
+        </h1>
+        <img
+          src="../images/banner-logo.png"
+          class="d-block w-100"
+          alt="Lab technician looking at samples through a microscope"
+        />
       </section>
+      <!-- /Banner -->
 
-      <section>
-        <h2 class="sr-only">Contact information</h2>
-        <div class="card">
-          <!-- for decorative images, alt="" makes screen readers ignore it;
-           aria-hidden="true" hides it from screen readers. -->
-          <img
-            class="contact-icon"
-            src="../images/whatsApp-icon.svg"
-            alt=""
-            aria-hidden="true"
-          />
-          <span>(11)3467-9809</span>
-        </div>
-        <div class="card">
-          <img
-            class="contact-icon"
-            src="../images/mail-icon.svg"
-            alt=""
-            aria-hidden="true"
-          />
-          <span>labemail@gmail.com</span>
-        </div>
-        <div class="card">
-          <img
-            class="contact-icon"
-            src="../images/call-icon.svg"
-            alt=""
-            aria-hidden="true"
-          />
-          <span>(11)0976-1245</span>
-        </div>
+      <!-- Contact information section using bootstrap list-group -->
+      <section class="d-flex justify-content-center text-center my-3">
+        <h2 class="visually-hidden">Contact information</h2>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item">
+            <img
+              class="contact-icon"
+              src="../images/whatsApp-icon.svg"
+              alt="whatsapp icon"
+            />
+            <span>(11)3467-9809</span>
+          </li>
+          <li class="list-group-item">
+            <img src="../images/mail-icon.svg" alt="mail icon" />
+            <span>labemail@gmail.com</span>
+          </li>
+          <li class="list-group-item">
+            <img src="../images/call-icon.svg" alt="phone icon" />
+            <span>(11)0976-1245</span>
+          </li>
+        </ul>
       </section>
-      <section id="contact-form-container">
+      <!-- /Contact information section using bootstrap list-group -->
+
+      <!-- Contact form section using bootstrap form -->
+      <section class="d-flex flex-column align-items-center text-center mb-3">
         <h2>Send LabName a Message</h2>
         <p>In order to assist, please provide the following information:</p>
-        <br />
-        <div>
-          <form action="/send" method="post">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" />
-            <br />
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" />
-            <br />
-            <label for="message"
+        <form
+          action="/send"
+          method="post"
+          class="col-md-7 col-lg-5 shadow-lg p-3 bg-body-tertiary rounded"
+        >
+          <div class="mb-3">
+            <label for="name" class="visually-hidden form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Name"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="visually-hidden form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              aria-describedby="emailHelp"
+              placeholder="Email"
+            />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="visually-hidden form-label"
               >Please provide a detailed question or comment.</label
             >
-            <textarea name="message" id="message"></textarea>
-            <br />
-            <!-- Fieldset + legend groups the radio options and gives the question a clear title -->
-            <fieldset>
+            <textarea
+              name="message"
+              id="message"
+              name="message"
+              class="form-control"
+              placeholder="Please provide a detailed question or comment."
+            ></textarea>
+          </div>
+
+          <div class="mb-3">
+            <fieldset class="form-label">
               <legend>Are you a labName's patient?</legend>
               <input type="radio" name="isPatient" id="yes" value="yes" />
               <label for="yes">Yes</label>
               <input type="radio" name="isPatient" id="no" value="no" />
               <label for="no">No</label>
             </fieldset>
+          </div>
 
-            <br />
-            <input type="submit" value="Send" />
-          </form>
-        </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </section>
+      <!-- /Contact form section using bootstrap form -->
     </main>
 
     <footer>

@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,52 +17,108 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
-      <div>
-        <a href="../index.html"
-          ><img
-            class="lab-logo"
-            src="../images/lab-icon.png"
-            alt="laboratory logo"
-        /></a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <!--According to chatGpt href="#", it affects navigability and SEO-->
-          <!-- aria-current="page" indicates the current page for screen readers-->
-          <li><a href="about.html" aria-current="page">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <!-- nav with bootstrap burger menu -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"
+            ><img
+              class="img-fluid lab-logo"
+              src="../images/lab-icon.png"
+              alt="laboratory logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="justify-content-lg-end collapse navbar-collapse"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active fw-bold"
+                  href="about.html"
+                  aria-current="page"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
+      <!-- / nav with bootstrap burger menu -->
     </header>
+
     <main>
-      <section id="banner">
-        <h1>About Us</h1>
+      <!--  banner -->
+      <section class="banner position-relative">
+        <h1
+          class="banner__title text-center position-absolute top-50 start-50 translate-middle z-3 shadow-lg p-3 mb-5 rounded"
+        >
+          About Us
+        </h1>
+        <img
+          src="../images/banner-logo.png"
+          class="d-block w-100"
+          alt="Lab technician looking at samples through a microscope"
+        />
       </section>
-      <section>
-        <figure class="container-image">
-          <img src="../images/lab-technician.jpg" alt="laboratory technician" />
-          <figcaption class="sr-only">
-            Laboratory technician working in the lab
-          </figcaption>
-        </figure>
-        <div class="container-description">
-          <h2>Who we are</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-            quod numquam saepe voluptatibus cupiditate accusamus nulla, quasi
-            eius odio provident consequuntur corporis, obcaecati, laborum ullam
-            mollitia. Reprehenderit unde architecto nesciunt?Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Laboriosam perferendis
-            reprehenderit harum incidunt error iusto culpa vel, veniam
-            distinctio numquam ullam. Consequuntur inventore adipisci debitis
-            numquam rerum accusantium eum nemo.
-          </p>
+      <!--  /banner -->
+
+      <!-- information about the lab -->
+      <section class="card p-0 my-md-4 container">
+        <div class="row g-0">
+          <figure class="m-0 col-md-4">
+            <img
+              class="h-100 img-fluid rounded-start"
+              src="../images/lab-technician.jpg"
+              alt="laboratory technician"
+            />
+            <figcaption class="visually-hidden">
+              Laboratory technician working in the lab
+            </figcaption>
+          </figure>
+
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title">Who we are</h2>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis quod numquam saepe voluptatibus cupiditate accusamus
+                nulla, quasi eius odio provident consequuntur corporis,
+                obcaecati, laborum ullam mollitia. Reprehenderit unde architecto
+                nesciunt?Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Laboriosam perferendis reprehenderit harum incidunt error
+                iusto culpa vel, veniam distinctio numquam ullam. Consequuntur
+                inventore adipisci debitis numquam rerum accusantium eum nemo.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
+      <!-- /information about the lab -->
     </main>
 
     <footer>
