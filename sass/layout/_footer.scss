@@ -1,0 +1,17 @@
+/* variables */
+@use "../utilities/variables" as *;
+/* mixin */
+@use "../utilities/mixin" as *;
+
+footer {
+  padding: 1rem;
+  background-color: $footer-bg-color;
+  text-align: right;
+  div {
+    a {
+      img {
+        @include size(40px, 20px);
+      }
+    }
+  }
+}

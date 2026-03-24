@@ -1,0 +1,31 @@
+/* mixin */
+@use "../utilities/mixin" as *;
+
+.main--grid {
+  @include grid(repeat(2, 1fr), 1fr);
+}
+.banner--flex {
+  @include flex;
+  background-image: url("../images/banner-logo.png");
+  background-position: right top;
+  background-size: cover;
+}
+.banner__title--flex {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+.main__card {
+  @include grid(repeat(3, 1fr), repeat(5, 1fr));
+  align-items: center;
+  justify-items: center;
+  gap: 0.5rem;
+  margin: 1rem;
+  img {
+    @include size(70%, 80%);
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(143, 149, 159);
+    box-shadow: 8px 4px rgb(143, 149, 159);
+  }
+}

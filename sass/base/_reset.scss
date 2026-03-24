@@ -1,0 +1,21 @@
+/* variables */
+@use "../utilities/variables" as *;
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $background-color;
+  font-family: $font-primary;
+}
+a {
+  text-decoration: none;
+}
+/* This class hides the text visually but keeps it available for screen readers. */
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}

@@ -1,0 +1,18 @@
+/* mixin */
+@use "../utilities/mixin" as *;
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  /* laboratory-test-accepted-insurance page */
+  .main--grid {
+    @include grid(1fr 50%, 1fr);
+  }
+  .main__card {
+    @include grid(repeat(2, 1fr), repeat(3, 1fr));
+  }
+}
+/* /laboratory-test-accepted-insurance page */
