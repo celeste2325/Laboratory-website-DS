@@ -8,9 +8,12 @@ footer {
   background-color: $footer-bg-color;
   text-align: right;
   div {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
     a {
       img {
-        @include size(40px, 20px);
+        @include size(16px, 16px);
       }
     }
   }
