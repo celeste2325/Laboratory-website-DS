@@ -8,8 +8,14 @@
   box-sizing: border-box;
 }
 body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: $background-color;
   font-family: $font-primary;
+}
+main {
+  flex: 1;
 }
 a {
   text-decoration: none;

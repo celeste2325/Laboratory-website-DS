@@ -8,8 +8,15 @@
 }
 
 body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: rgb(237, 241, 241);
   font-family: "Lato", sans-serif;
+}
+
+main {
+  flex: 1;
 }
 
 a {
@@ -84,6 +91,15 @@ section .banner__title {
   box-shadow: 8px 4px rgb(143, 149, 159);
 }
 
+/* about */
+section div figure .about-img {
+  object-fit: cover;
+  object-position: left;
+}
+section div div p {
+  text-align: justify;
+}
+
 /* contact */
 /* variables */
 /* mixin */
@@ -144,15 +160,10 @@ footer div a img {
 /* mixin */
 /* mixin */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
   /* laboratory-test-accepted-insurance page */
   .main--grid {
     display: grid;
-    grid-template-rows: 1fr 50%;
+    grid-template-rows: 30% auto;
     grid-template-columns: 1fr;
   }
   .main__card {
